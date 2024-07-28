@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh; /* Full viewport height */
@@ -15,9 +16,15 @@
         canvas {
             border: 5px solid black; /* Add a thicker border around the canvas */
         }
+        #score {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
+    <!-- Score display -->
+    <div id="score">Score: 0</div>
     <!-- Canvas element where the game will be rendered -->
     <canvas id="gameCanvas" width="400" height="400"></canvas>
     <!-- Link to the JavaScript file -->

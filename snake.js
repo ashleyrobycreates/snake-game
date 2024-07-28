@@ -23,6 +23,9 @@ let obstacles = [];
 // Generate 5 obstacles
 generateObstacles(5);
 
+// Initialize the score
+let score = 0;
+
 // Set the game speed (interval in milliseconds)
 let gameSpeed = 100;
 
@@ -93,6 +96,8 @@ function game() {
 
     // Check if the snake has eaten the food
     if (snakeX === food.x && snakeY === food.y) {
+        score++;
+        document.getElementById('score').innerText = 'Score: ' + score;
         food = {
             x: Math.floor(Math.random() * 19 + 1) * box,
             y: Math.floor(Math.random() * 19 + 1) * box
